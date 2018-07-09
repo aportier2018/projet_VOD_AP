@@ -6,9 +6,9 @@
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  	<title>Projet VOD AP</title>
+  	<title> formulaire de connexion de l'UTILISATEUR - Projet VOD AP</title>
   	<link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/formulaire.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   </head>
