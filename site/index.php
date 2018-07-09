@@ -15,7 +15,7 @@
   <body>
     <?php include("include/header.php") ?>
     <main>
-
+ page index
     </main>
     <?php include("include/footer.php") ?>
   </body>
