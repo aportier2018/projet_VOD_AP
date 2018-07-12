@@ -1,0 +1,18 @@
+html {
+    width: 100%;
+    min-height: 100%;
+    background: #fff;
+    font: 400 62.5% 'Open Sans', Arial, Helvetica, sans-serif;
+    /* color: #575656; */
+}
+
+body {
+    position: relative;
+    height: 100%;
+  }
+
+header{
+  background-color: #444561;
+  border:1px solid #fff;
+  color:#f1f1f1;
+}
