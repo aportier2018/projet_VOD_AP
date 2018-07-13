@@ -30,9 +30,19 @@ body {
       border: 1px solid #6288ad;
   }
 
+    /******************************************
+    * FORMULAIRE inscription utilisateur      *
+    *                                         *
+    ******************************************/
+
+
+
+
+
+
 
   /******************************************
-  *Media querie pour responsive:            *
+  *       Media querie pour responsive:     *
   *                                         *
   ******************************************/
   @media all and (max-width:780px) {

@@ -8,15 +8,48 @@
 
   	<title> formulaire d'inscription - Projet VOD AP</title>
   	<link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/formulaire.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   </head>
   <body>
-    <?php include("include/header.php") ?>
-    <main>
- page index
+          <!--**********- HEADER -->
+    <?php include("../include/header.php") ?>
+         <!---****** FIN HEADER -->
+
+        <!--*********FORMULAIRE -->
+    <main class="f_inscription">
+      <section class="marginB">
+        <div class="container">
+           <form method="post" action="v_inscription.php">
+               <fieldset>
+                   <legend>Inscription</legend>
+                   <span>Titre : </span>
+                   <input type="radio" name="titre" value="Mme" id="F" required/><label for="F" class="notmarge">Mme</label>
+                   <input type="radio" name="titre" value="M" id="M" required/><label for="M" class="notmarge">M</label><br>
+                   <label for="nom">Nom : </label>
+                   <input type="text" name="nom" id="nom" required><br>
+                   <label for="prenom">Prenom : </label>
+                   <input type="text" name="prenom" id="prenom" required><br>
+                   <label for="email">Email : </label>
+                   <input type="email" name="email" id="email" required><br>
+                   <label for="mdp1">Mot de passe : </label>
+                   <input type="password" name="mdp1" id="mdp1" required><br>
+                   <label for="mdp2">Confirmer mot de passe : </label>
+                   <input type="password" name="mdp2" id="mdp2" required><br>
+
+                   <input type="submit" value="S'INSCRIRE">
+                   <input type="reset" value="RESET">
+               </fieldset>
+           </form>
+           </div>
+        </section>
     </main>
-    <?php include("include/footer.php") ?>
+    <!--********* FIN FORMULAIRE -->
+
+    <!--*********FOOTER -->
+    <?php include("../include/footer.php") ?>
+    <!--*********FIN FOOTER -->
+
   </body>
 </html>

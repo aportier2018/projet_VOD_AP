@@ -1,7 +1,7 @@
 html {
     width: 100%;
     min-height: 100%;
-    background: #fff;
+    /* background: #00058C; */
     font: 400 62.5% 'Open Sans', Arial, Helvetica, sans-serif;
     /* color: #575656; */
 }
@@ -9,6 +9,15 @@ html {
 body {
     position: relative;
     height: 100%;
+    background: url('../image/cinema.jpg') no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.5;
+  }
+
+  main{
+
   }
 
   /******************************************
@@ -21,6 +30,120 @@ body {
     color:#f1f1f1;
   }
 
+  /******************************************
+  *                FORMULAIRE               *
+  *                                         *
+  ******************************************/
+  /* input,
+  textarea,
+  select {
+      width: 305px;
+      height: 30px;
+      padding: 0 5px;
+      margin: 0 0 10px;
+      font-size: 1.4rem;
+      color: #fff;
+      background: #444561;
+      border: 1px solid #6288ad;
+  } */
+
+    /******************************************
+    * FORMULAIRE inscription utilisateur      *
+    *                                         *
+    ******************************************/
+    .text {
+        color: #FFFFFF;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    fieldset {
+        color: #FFFFFF;
+        width: 30%;
+        margin: 100px auto ; /*
+        margin-top: 100px;
+        margin-bottom : 100px;*/
+        /* background-color: #0262c8; */
+        border-radius: 10px;
+    }
+
+    .confield {
+        color: #FFFFFF;
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        background-color: #555555;
+    }
+
+    legend {
+        font-size: 3rem;
+        margin:auto;
+        margin-top: 10%;
+    }
+
+    label:not(.notmarge) {
+        margin-left:4%;
+    }
+
+    label {
+      font-size: 2rem;
+    }
+
+    input {
+        width: 90%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: 0;
+        margin-top: 2%;
+        margin-left: 4%;
+        margin-bottom: 2%;
+        padding-left: 1%;
+        font-size: 2rem;
+    }
+
+    input[type="radio"] {
+        width: 20px;
+        vertical-align: middle;
+        margin-left: 40px;
+        font-size: 1.5rem;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 180px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 12%;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    span {
+        font-size: 2rem;
+        margin-left: 4%;
+    }
+
+    p {
+        font-size: 1.5rem;
+        color: red;
+        text-align: center;
+    }
+
+    .field {
+        height: 450px;
+    }
+
+    .marginB {
+      margin-bottom: 100px;
+      margin-top: 150px;
+    }
+
+    @media screen and (max-width: 800px) {
+      fieldset {
+        width: 90%;
+      }
+    }
   /******************************************
   *               FOOTER                    *
   *                                         *
