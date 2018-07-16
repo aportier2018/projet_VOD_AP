@@ -12,14 +12,14 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   </head>
-  </head>
+
   <body>
           <!--**********- HEADER -->
     <?php include("../include/header.php") ?>
          <!---****** FIN HEADER -->
 
         <!--*********FORMULAIRE -->
-    <main class="f_inscription">
+    <main class="v_inscription">
       <section class="marginB">
         <div class="container">
            <form method="post" action="v_inscription.php">
