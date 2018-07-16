@@ -9,14 +9,35 @@
   	<title>Index - Projet VOD AP</title>
   	<link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
-  
+
   <body>
+
+    <!--***********
+    -    HEADER
+     **************-->
     <?php include("include/header.php") ?>
+    <!--**************
+    *    FIN HEADER  *
+     **************-->
+
     <main>
  page index
     </main>
+
+    <!--***********
+    *   FOOTER    *
+     **************-->
     <?php include("include/footer.php") ?>
+    <!--***********
+    *    FOOTER   *
+     **************-->
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <script src="js/scripts.js"></script>
   </body>
+
 </html>

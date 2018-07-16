@@ -1,21 +1,27 @@
-<!DOCTYPE html>
-<html lang="fr">
+<header>
+  <div class="menu" onclick="changeX(this)">
+    <div class ="bouton" id="bouton" >
+        <p class="bar1"></p>
+        <p class="bar2"></p>
+        <p class="bar3"></p>
+    </div>
+  </div>
 
-  <head>
-  	<meta charset="utf-8">
-  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <div id="mySidenav" class="sidenav" >
+    <a href="../index.php">Accueil</a>
+    <a href="./liste_film.php">liste des films</a>
+    <a href="./form/f_inscription.php">S'inscrire</a>
+    <a href="./form/f_connexionv.php">Connexion</i></a>
+    <a href="./contact.php">Contact</a>
+  </div>
 
-  	<title>header du Projet VOD AP</title>
-  	<link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <h1>page header</h1>
+  <div class ="l_film">
+    <a href="./liste_film.php">liste des films</a>
+  </div>
 
-    </header>
+  <div class = "compte">
+    <a href="./form/f_inscription.php">S'inscrire</a>
+    <a href="./form/f_connexion.php"><i class="fa fa-user"></i></a>
+  </div>
 
-  </body>
-</html>
+</header>

@@ -7,9 +7,10 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 
   	<title> formulaire d'inscription - Projet VOD AP</title>
-  	<link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   </head>
   </head>
   <body>
@@ -50,6 +51,9 @@
     <!--*********FOOTER -->
     <?php include("../include/footer.php") ?>
     <!--*********FIN FOOTER -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <script src="../js/scripts.js"></script>
 
   </body>
 </html>
