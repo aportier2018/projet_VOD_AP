@@ -28,43 +28,31 @@
       <h1>Détail de votre film</h1>
 
  <div class="detail">
+   <?php
+   $reponse = $dbh->query('SELECT titre, synopsis FROM film WHERE titre = "dragon" ');
+   ?>
+
+   <!-- // On affiche chaque entrée une à une -->
+   <?php
+     while ($donnees = $reponse->fetch())
+     {
+      ?>
+      <h3>Titre</h3><?php echo $donnees['titre'];?><br/>
+      <h3>Synopsis</h3> <?php echo $donnees['synopsis'];?><br/>
+      <?php
+      }
+       $reponse->closeCursor();// Termine le traitement de la requête
+     ?>
+
     <?php
-    $reponse = $dbh->query('SELECT id_film, titre, synopsis FROM film WHERE titre="avatar"');
-
-    // On affiche chaque entrée une à une
-    while ($donnees = $reponse->fetch())
-    {
+      $reponse = $dbh->query('SELECT  p_acteur, n_acteur FROM acteur NATURAL JOIN joue NATURAL JOIN film WHERE titre = "dragon" ');
+      echo "<h3>Acteurs : </h3>";
+        while ($donnees = $reponse->fetch())
+        {
+          echo $donnees['n_acteur']." ".$donnees['p_acteur']."<br/>";
+        }
+         $reponse->closeCursor();// Termine le traitement de la requête
     ?>
-    <p>
-
-    Titre  : <?php echo $donnees['titre']; ?><br />
-    Synopsis : <?php echo $donnees['synopsis']; ?>
-    </p>
-    <?php
-    }
-
-    $reponse->closeCursor(); // Termine le traitement de la requête
-
-    ?>
-    <?php
-    $req = $dbh->query(('SELECT n_acteur, p_acteur FROM acteur') INNER JOIN ('SELECT id_film, titre, synopsis FROM film WHERE titre="avatar"'));
-
-    // On affiche chaque entrée une à une
-    while ($donnees = $req->fetch())
-    {
-    ?>
-    <p>
-
-    nom acteur  : <?php echo $donnees['n_acteur']; ?><br />
-    prénom acteur : <?php echo $donnees['p_acteur']; ?>
-    </p>
-    <?php
-    }
-
-    $reponse->closeCursor(); // Termine le traitement de la requête
-
-    ?>
-
 
  </div>
   </main>

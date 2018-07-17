@@ -8,11 +8,11 @@
   </div>
 
   <div id="mySidenav" class="sidenav" >
-    <a href="./index.php">Accueil</a>
-    <a href="./detail_film.php">detail d'un film</a>
-    <a href="/form/f_inscription.php">S'inscrire</a>
-    <a href="./form/f_connexion_users.php">Connexion</i></a>
-    <a href="./contact.php">Contact</a>
+    <a href="index.php">Accueil</a>
+    <a href="detail_film.php">detail d'un film</a>
+    <a href="f_inscription.php">S'inscrire</a>
+    <a href="f_connexion_users.php">Connexion</i></a>
+    <a href="contact.php">Contact</a>
   </div>
 
   <div class ="d_film">
@@ -20,8 +20,8 @@
   </div>
 
   <div class = "compte">
-    <a href="./form/f_inscription.php">S'inscrire</a>
-    <a href="./form/f_connexion_user.php"><i class="fa fa-user"></i></a>
+    <a href="f_inscription.php">S'inscrire</a>
+    <a href="f_connexion_user.php"><i class="fa fa-user"></i></a>
   </div>
 
 </header>
