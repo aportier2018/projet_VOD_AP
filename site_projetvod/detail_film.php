@@ -1,4 +1,4 @@
-<?php include("connectbdd.php") ?>
+//<?php //include("connectbdd.php") ?>
 <!DOCTYPE html>
 <html lang="fr">
 

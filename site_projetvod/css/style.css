@@ -190,10 +190,7 @@ background-size: cover;
     fieldset {
         color: #FFFFFF;
         width: 30%;
-        margin: 100px auto ; /*
-        margin-top: 100px;
-        margin-bottom : 100px;*/
-        /* background-color: #0262c8; */
+        margin: 100px auto ;
         border-radius: 10px;
     }
 
@@ -225,7 +222,7 @@ background-size: cover;
         width: 90%;
         height: 40px;
         border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(255, 255, 255, 0.9);
         border: 0;
         margin-top: 2%;
         margin-left: 4%;
@@ -247,7 +244,7 @@ background-size: cover;
         height: 40px;
         border-radius: 50%;
         margin-left: 12%;
-        color: #fff;
+        color: #000;
         font-size: 1.5rem;
     }
 
@@ -258,7 +255,7 @@ background-size: cover;
 
     .fielset p {
         font-size: 1.5rem;
-        color: red;
+        color: white;
         text-align: center;
     }
 
@@ -317,19 +314,13 @@ background-size: cover;
 
   .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
   }
 
   /* ------------------Footer left-------------------- */
 
   .footer-distributed .footer-left {
-    width: 40%;
-  }
-
-  /* -----------------The company logo------------------ */
-
-  footer img {
-    width: 80%;
+    width: 30%;
   }
 
   /* --------------------Footer links----------------- */
@@ -354,13 +345,67 @@ background-size: cover;
     margin: 0;
   }
 
-  /* -------------------Footer Center------------------- */
+  /* ------------------Footer center----------------- */
 
   .footer-distributed .footer-center {
     width: 35%;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
   }
 
-  .footer-distributed .footer-center i {
+.contact textarea
+{
+  width: 80%;
+  font-family: 'Open Sans';
+  border-radius: 15px;
+  background-color: #f1f1f1;
+  margin-top:10%;
+  padding-left: 3%;
+  font-size: 1.5rem;
+}
+
+.contact input {
+      width: 80%;
+      height: 25px;
+      border-radius: 15px;
+      background-color: #f1f1f1;
+      border: 0;
+      margin-top: 0;
+      margin-left: 0;
+      margin-bottom:0;
+      padding-left: 3%;
+      font-size: 1.5rem;
+  }
+
+  .contact input[type="submit"]
+   {
+      width: 100px;
+      height: 40px;
+      border-radius: 50%;
+      margin-left:5%;
+      color: #8f9296;
+      font-size: 1.5rem;
+  }
+
+  .contact .marginB {
+    margin-bottom: 100px;
+    margin-top: 150px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .contact fieldset {
+      width: 90%;
+    }
+  }
+
+  /* -------------------Footer Right------------------- */
+
+  .footer-distributed .footer-right {
+    width: 30%;
+  }
+
+  .footer-distributed .footer-right i {
     background-color: #0262c8;
     color: #fff;
     font-size: 2rem;
@@ -368,42 +413,34 @@ background-size: cover;
     height: 35px;
     border-radius: 50%;
     text-align: center;
-    line-height: 42px;
+    line-height: 35px;
     margin: 10px 15px;
     vertical-align: middle;
   }
 
-  .footer-distributed .footer-center i.fa-envelope {
+  .footer-distributed .footer-right i.fa-envelope {
     font-size: 1.7rem;
     line-height: 38px;
   }
 
-  .footer-distributed .footer-center p {
+  .footer-distributed .footer-right p {
     display: inline-block;
     color: #ffffff;
     vertical-align: middle;
     margin: 0;
   }
 
-  .footer-distributed .footer-center p span {
+  .footer-distributed .footer-right p span {
     display: block;
     font-weight: normal;
     font-size: 1.4rem;
     line-height: 2;
   }
 
-  .footer-distributed .footer-center p a {
+  .footer-distributed .footer-right p a {
     color: #fff;
     text-decoration: none;
-    ;
   }
-
-  /* ------------------Footer Right----------------- */
-
-  .footer-distributed .footer-right {
-    width: 20%;
-  }
-
   .footer-distributed .footer-company-about {
     line-height: 20px;
     color: #92999f;
@@ -429,7 +466,6 @@ background-size: cover;
     width: 35px;
     height: 35px;
     cursor: pointer;
-    background-color:#0262c8;
     border-radius: 2px;
     font-size: 2rem;
     color: #ffffff;

@@ -15,7 +15,7 @@
   <body>
     <?php include("header.php") ?>
     <main>
- page index
+ Bonjour, votre message a bien été envoyé. Nous allons y répondre dans les plus brefs délais
     </main>
     <?php include("footer.php") ?>
   </body>
