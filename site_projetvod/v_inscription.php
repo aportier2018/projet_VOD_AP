@@ -14,7 +14,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <?php include("../include/header.php") ?>
+    <?php include("header.php") ?>
 
       <main>
           validation inscription
@@ -73,6 +73,6 @@
         ?>
 
     <!-- FOOTER -->
-    <?php include("../include/footer.php") ?>
+    <?php include("footer.php") ?>
   </body>
 </html>

@@ -13,10 +13,10 @@
   </head>
   </head>
   <body>
-    <?php include("include/header.php") ?>
+    <?php include("header.php") ?>
     <main>
  page index
     </main>
-    <?php include("include/footer.php") ?>
+    <?php include("footer.php") ?>
   </body>
 </html>

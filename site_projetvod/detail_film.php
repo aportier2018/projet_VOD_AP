@@ -19,7 +19,7 @@
     <!--***********
     -    HEADER
      **************-->
-    <?php include("include/header.php") ?>
+    <?php include("header.php") ?>
     <!--**************
     *    FIN HEADER  *
      **************-->
@@ -60,7 +60,7 @@
     <!--***********
     *   FOOTER    *
      **************-->
-    <?php include("include/footer.php") ?>
+    <?php include("footer.php") ?>
     <!--***********
     *    FOOTER   *
      **************-->

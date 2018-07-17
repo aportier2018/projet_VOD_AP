@@ -80,7 +80,7 @@ background-size: cover;
     width: 0%;
     position: fixed;
     z-index: 1;
-    top: 11.5%;
+    top: 6%;
     left: 0%;
     background-color: rgba(0,0,0,0.8);
     overflow-x: hidden;
@@ -209,6 +209,8 @@ background-size: cover;
         font-size: 3rem;
         margin:auto;
         margin-top: 10%;
+        text-align: center;
+        padding-bottom: 5%;
     }
 
     label:not(.notmarge) {
@@ -279,7 +281,7 @@ background-size: cover;
     *                                         *
     ******************************************/
     .detail {
-      
+
       margin-top:5%;
       color:#fff;
       font-size: 2rem;

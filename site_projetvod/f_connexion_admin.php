@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <?php include("../include/header.php") ?>
+    <?php include("header.php") ?>
     <main>
       <div>
         <form method="post" action="v_connexion_admin.php">
@@ -27,6 +27,6 @@
         </form>
     </div>
     </main>
-    <?php include("../include/footer.php") ?>
+    <?php include("footer.php") ?>
   </body>
 </html>

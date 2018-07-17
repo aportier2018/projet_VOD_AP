@@ -10,7 +10,7 @@
       <a href="">Info pratiques</a> · -->
       <a href="./form/f_inscription.php">S'inscrire</a> .
       <a href="./form/f_connexion.php">Connexion</a> .
-      <a href="./contact.php">Contact</a>
+
     </p>
     <div style = "display : flex;">
       <p class="footer-company-name">Copyright &copy; 2018 &#160;| </p>
@@ -33,7 +33,14 @@
 
     <div>
       <i class="fa fa-envelope"></i>
-      <p><a href="mailto:lafetedunumérique@company.com">lecinémaenvod@cinema.com</a></p>
+      <p><a href="mailto:lafetedunumérique@company.com">lecinemaenvod@cinema.com</a></p>
+    </div>
+
+    <div class="footer-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
     </div>
 
   </div>
@@ -41,16 +48,8 @@
   <div class="footer-right">
 
     <p class="footer-company-about">
-      <span>Au sujet de nous</span> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-    </p>
-
-    <div class="footer-icons">
-
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
-
+      <a href="./contact.php">Contact</a>
+  </p>
     </div>
 
   </div>
