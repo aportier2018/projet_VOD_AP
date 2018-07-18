@@ -23,11 +23,13 @@ background-size: cover;
   header {
     display:flex;
     width: 100%;
-    background-color: #000;
-    font-size: 2rem;
+    font-size: 3.5rem;
     position: fixed;
     z-index:10;
     color: #fff;
+    height:25%;
+    background-image: url('../image/pellicule.jpg');
+    background-size: contain;
   }
 
   header a {
@@ -42,9 +44,8 @@ background-size: cover;
   /*---------------------------BOUTON------------------------*/
 
    header div{
-    background-color: #000;
     cursor: pointer;
-    margin-top: 1%;
+    margin-top: 2%;
   }
 
   .menu{
@@ -136,14 +137,14 @@ background-size: cover;
   /*<------------------liste des films--------------------->*/
   .d_film {
     width :65%;
-    margin-top: 1%;
+    margin-top: 2%;
   }
 
   /* ----------- DEBUT compte utilisateur---------------------->*/
 
   .compte{
     width:20%;
-    margin-top:1%;
+    margin-top:2%;
   }
 
   .compte a:first-child{
@@ -161,21 +162,35 @@ background-size: cover;
 
 
   /******************************************
-  *                FORMULAIRE               *
+  *             LISTE DES FILMS            *
   *                                         *
   ******************************************/
-  /* input,
-  textarea,
-  select {
-      width: 305px;
-      height: 30px;
-      padding: 0 5px;
-      margin: 0 0 10px;
-      font-size: 1.4rem;
-      color: #fff;
-      background: #444561;
-      border: 1px solid #6288ad;
-  } */
+  .liste_film{
+        margin-top:8%;
+  }
+
+  .liste_film h1{
+    font-size : 4rem;
+    color:white;
+    text-align: center;
+    box-shadow: 0 0 35px 25px;
+    margin:auto;
+    padding:1%;
+  }
+
+  .liste_film div{
+    display:flex;
+    justify-content: space-around;
+  }
+
+   .liste_film img{
+    margin:3%;
+    width:15%;
+  }
+
+  .liste_film img:hover{
+    box-shadow: 0 0 5px 5px #fff;
+  }
 
     /******************************************
     * FORMULAIRE inscription utilisateur      *

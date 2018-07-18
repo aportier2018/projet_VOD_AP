@@ -8,11 +8,10 @@
   </div>
 
   <div id="mySidenav" class="sidenav" >
-    <a href="index.php">Accueil</a>
+    <a href="index.php">Liste des films</a>
     <a href="detail_film.php">détail d'un film</a>
     <a href="f_inscription.php">S'inscrire</a>
-    <a href="f_connexion_users.php">Connexion</i></a>
-    <a href="contact.php">Contact</a>
+    <a href="f_connexion_user.php">Connexion</i></a>
   </div>
 
   <div class ="d_film">
