@@ -1,4 +1,4 @@
-//<?php //include("connectbdd.php") ?>
+<?php include("connectbdd.php") ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -24,12 +24,11 @@
     *    FIN HEADER  *
      **************-->
 
-    <main>
+    <main class="detail">
       <h1>Détail de votre film</h1>
 
- <div class="detail">
    <?php
-   $reponse = $dbh->query('SELECT titre, synopsis FROM film WHERE titre = "dragon" ');
+   $reponse = $dbh->query('SELECT titre, synopsis, affiche FROM film WHERE titre = "dragon" ');
    ?>
 
    <!-- // On affiche chaque entrée une à une -->
@@ -37,24 +36,36 @@
      while ($donnees = $reponse->fetch())
      {
       ?>
-      <h3>Titre</h3><?php echo $donnees['titre'];?><br/>
-      <h3>Synopsis</h3> <?php echo $donnees['synopsis'];?><br/>
+      <img src ='<?php echo $donnees['affiche'];?>'>
+      <div class="synopsis">
+        <h3>Titre : <?php echo $donnees['titre'];?></h3>
+        <h3>Synopsis :</h3> <p><?php echo $donnees['synopsis'];?></p>
+      </div>
       <?php
       }
        $reponse->closeCursor();// Termine le traitement de la requête
      ?>
 
-    <?php
-      $reponse = $dbh->query('SELECT  p_acteur, n_acteur FROM acteur NATURAL JOIN joue NATURAL JOIN film WHERE titre = "dragon" ');
-      echo "<h3>Acteurs : </h3>";
-        while ($donnees = $reponse->fetch())
-        {
-          echo $donnees['n_acteur']." ".$donnees['p_acteur']."<br/>";
+      <div class="acteur">
+        <h3>Acteurs :</h3>
+        <?php
+          $reponse = $dbh->query('SELECT  p_acteur, n_acteur, genre FROM acteur NATURAL JOIN joue NATURAL JOIN film NATURAL JOIN possede NATURAL JOIN genre WHERE titre = "dragon" ');
+
+            while ($donnees = $reponse->fetch())
+            {
+        ?>
+
+          <p><?php echo $donnees['n_acteur']." ".$donnees['p_acteur'];?></p>
+
+
+            <h3>Genre:</h3>
+            <p><?php echo $donnees['genre'];?></p>
+      <?php
         }
          $reponse->closeCursor();// Termine le traitement de la requête
     ?>
+      </div>
 
- </div>
   </main>
 
     <!--***********

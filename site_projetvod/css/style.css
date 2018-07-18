@@ -273,23 +273,49 @@ background-size: cover;
         width: 90%;
       }
     }
-    /******************************************
-    *               DETAIL FILM               *
-    *                                         *
-    ******************************************/
-    .detail {
 
-      margin-top:5%;
-      color:#fff;
+
+      /******************************************
+      *                DETAIL FILM              *
+      *                                         *
+      ******************************************/
+
+    .detail{
       font-size: 2rem;
+      color: #fff;
+      margin:5% auto;
     }
 
+    .detail h1{
+      font-size: 4rem;
+      text-align: center;
+    }
 
-    /******************************************
-    *              FIN DETAIL FILM            *
-    *                                         *
-    ******************************************/
+    .detail img{
+      width: 500px;
+      margin:2% auto;
+    }
 
+    .detail h3
+    {
+      font-size: 3rem;
+      text-align: center;
+      margin-top:1%;
+    }
+
+    .detail .acteur
+    {
+      text-align: center;
+      width :50%;
+      margin:auto;
+    }
+
+    .detail .synopsis
+    {
+      text-align: justify;
+      width :50%;
+      margin:auto;
+    }
 
 
   /******************************************
@@ -308,7 +334,7 @@ background-size: cover;
     width: 100%;
     text-align: left;
     font-size:  1.5rem;
-    padding: 0px 20px;
+    padding: 20px 20px;
     margin-top: auto;
   }
 
@@ -321,6 +347,7 @@ background-size: cover;
 
   .footer-distributed .footer-left {
     width: 30%;
+    font-size:2.5rem;
   }
 
   /* --------------------Footer links----------------- */
@@ -340,7 +367,7 @@ background-size: cover;
 
   .footer-distributed .footer-company-name {
     color: #8f9296;
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: normal;
     margin: 0;
   }
@@ -348,7 +375,7 @@ background-size: cover;
   /* ------------------Footer center----------------- */
 
   .footer-distributed .footer-center {
-    width: 35%;
+    width: 25%;
     font-size: 1.5rem;
     color: #fff;
     text-align: center;
@@ -402,7 +429,9 @@ background-size: cover;
   /* -------------------Footer Right------------------- */
 
   .footer-distributed .footer-right {
-    width: 30%;
+    width: 20%;
+    margin-left: 10%;
+    text-align: left;
   }
 
   .footer-distributed .footer-right i {
