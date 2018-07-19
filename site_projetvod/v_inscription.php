@@ -1,3 +1,6 @@
+
+<?php include("connectbdd.php") ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,68 +11,50 @@
 
   	<title> formulaire de contact - Projet VOD AP</title>
   	<link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/formulaire.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
-  </head>
+
   <body>
-    <!-- HEADER -->
-    <?php include("header.php") ?>
+          <!-- HEADER -->
+          <?php include("header.php") ?>
 
       <main>
-          validation inscription
-        <?php
-          $host_name = 'db745063418.db.1and1.com';
-          $database = 'db745063418';
-          $user_name = 'dbo745063418';
-          $password = '/Anne023';
-
-          $dbh = null;
-
-          try {
-            $dbh = new PDO("mysql:host=$host_name; dbname=$database;", $user_name, $password);
-          } catch (PDOException $e) {
-            echo "Erreur!: " . $e->getMessage() . "<br/>";
-            die();
-          }
-          ?>
+          Validation de votre inscription
 
         <?php
-             $gen=$_POST['titre'];
-             $name=$_POST['nom'];
-             $fname=$_POST['prenom'];
-             $mail=$_POST['email'];
-             $mdp1=$_POST['mdp1'];
-             $mdp2=$_POST['mdp2'];
-             $type=$_POST['type'];
+             $civilite = $_POST['civilite'];
+             $name = $_POST['nom'];
+             $fname = $_POST['prenom'];
+             $mail = $_POST['email'];
+             $mdp1 = $_POST['mdp1'];
+             $mdp2 = $_POST['mdp2'];
 
              if ($gen == 'F') {
                 $gen = "Mme";
-                }
-             else {
+            }
+             else
+             {
                 $gen = "M";
-                }
-
-            if($type == 1){
-                $type = "Visiteur";
-            }else if ($type == 2){
-                $type = "Exposant";
              }
-            else  if ($type == 3){
-            $type = "Administrateur";
-             };
 
-          echo $type;
-                     if ($mdp1 == $mdp2){
-                         $mdpsha = sha1($mdp1);
-          echo "OK";
-          echo $mdpsha;
+          if ($mdp1 == $mdp2){
+            $mdpsha = sha1($mdp1);
+            echo "OK";
+            echo $mdpsha;
+          }
 
-          $base->exec("INSERT INTO clients(titre,nom, prenom, mail, mdp, typeco) VALUES('$gen','$name','$fname','$mail','$mdpsha','$type')");
+
+          $insertion = 'INSERT INTO user(civilite, n_user, p_user, email_user, login_user, mdp_user) VALUES('$civilite','$name','$fname','$mail','$mdpsha')';
+          $reponse = $dbh->prepare($insertion);
+          $reponse->exec();
+
           echo "Inscription Confirmée";
-                           }else {
-                               echo "<p>erreur mdp</p>";
-                           };
+         }
+         else
+         {
+             echo "<p>erreur mdp</p>";
+          };
         ?>
 
     <!-- FOOTER -->

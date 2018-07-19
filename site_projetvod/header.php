@@ -14,6 +14,9 @@
     <a href="f_connexion_user.php">Connexion</i></a>
   </div>
 
+  <div class ="index.php">
+    <a href="./index.php">Liste des film</a>
+  </div>
   <div class ="d_film">
     <a href="./detail_film.php">Détail d'un film</a>
   </div>

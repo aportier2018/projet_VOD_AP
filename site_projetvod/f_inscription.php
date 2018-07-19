@@ -25,11 +25,11 @@
            <form method="post" action="v_inscription.php">
                <fieldset>
                    <legend>Inscription</legend>
-                   <span>Titre : </span>
-                   <input type="radio" name="titre" value="Mme" id="F" required/><label for="F" class="notmarge">Mme</label>
-                   <input type="radio" name="titre" value="M" id="M" required/><label for="M" class="notmarge">M</label><br>
+                   <span>Civilité : </span>
+                   <input type="radio" name="civilite" value="Mme" id="F" required/><label for="F" class="notmarge">Mme</label>
+                   <input type="radio" name="civilite" value="M" id="M" required/><label for="M" class="notmarge">M</label><br>
                    <label for="nom">Nom : </label>
-                   <input type="text" name="nom" id="nom" required><br>
+                   <input type="tnomxt" name="nom" id="nom" required><br>
                    <label for="prenom">Prenom : </label>
                    <input type="text" name="prenom" id="prenom" required><br>
                    <label for="email">Email : </label>

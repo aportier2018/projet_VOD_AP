@@ -45,7 +45,7 @@ background-size: cover;
 
    header div{
     cursor: pointer;
-    margin-top: 2%;
+    margin-top: 3%;
   }
 
   .menu{
@@ -81,9 +81,9 @@ background-size: cover;
     width: 0%;
     position: fixed;
     z-index: 1;
-    top: 6%;
+    top: 21%;
     left: 0%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: #0f2d3f99;
     overflow-x: hidden;
     /* transition: 0.5s; */
     padding-top: 25px;
@@ -298,39 +298,39 @@ background-size: cover;
     .detail{
       font-size: 2rem;
       color: #fff;
-      margin:5% auto;
+      margin:20% 0 5% 2%;
+      display:flex;
     }
 
-    .detail h1{
-      font-size: 4rem;
-      text-align: center;
+    .detail div:first-child{
+     width: 100%;
+
     }
 
-    .detail img{
-      width: 500px;
-      margin:2% auto;
+    div img{
+      width:100%;
     }
 
-    .detail h3
-    {
-      font-size: 3rem;
-      text-align: center;
-      margin-top:1%;
-    }
+  .descriptif {
+    padding:0 2%;
 
-    .detail .acteur
-    {
-      text-align: center;
-      width :50%;
-      margin:auto;
-    }
+  }
 
-    .detail .synopsis
-    {
-      text-align: justify;
-      width :50%;
-      margin:auto;
-    }
+.descriptif h1{
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 35px 25px;
+  margin: auto;
+  padding: 1%;
+  margin-bottom: 1%
+}
+
+
+.descriptif div
+{
+  margin:1%;
+}
 
 
   /******************************************
@@ -344,7 +344,7 @@ background-size: cover;
   }
 
   .footer-distributed {
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 35px 25px;
     box-sizing: border-box;
     width: 100%;
     text-align: left;
