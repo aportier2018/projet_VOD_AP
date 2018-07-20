@@ -26,8 +26,8 @@
                    <input type="text" name="nom" id="nom" required><br>
                    <label for="prenom">Prenom : </label>
                    <input type="text" name="prenom" id="prenom" required><br>
-                   <label for="email">Votre Email est </label>
-                   <input type="email" name="email" id="email" required><br>
+                   <label for="text">Votre login est </label>
+                   <input type="text" name="login" id="login" required><br>
                    <label for="mdp1">Votre mot de passe est </label>
                    <input type="password" name="mdp1" id="mdp1" required><br>
 
@@ -35,6 +35,20 @@
                    <input type="reset" value="RESET">
                </fieldset>
            </form>
+
+           <div class="suppresion">
+             <p> Si vous souhaitez supprimer votre compte, cliquez sur 'supprimer compte. ATTENTION Vous devrez vous réinscrire pour obtenir un nouveau compte</p>
+                   <?php
+                   echo "Si vous souhaitez supprimer votre compte, cliquez sur 'supprimer compte'";?>
+                   <p type"button" value="supprimer compte">  </p>
+                   <?php
+                   // $suppression ="DELETE FROM user WHERE civilite, n_user, p_user, email_user, login_user, mdp_user) VALUES('$civilite','$name','$fname','$mail','$login','$mdpsha')";
+                   //
+                   // $dbh->exec($suppresion);
+                   //
+                   // echo "<br/>Votre compte a été supprimé.";
+
+                   ?>
            </div>
         </section>
     </main>

@@ -19,11 +19,11 @@
       <?php include("header.php") ?>
     <!-- </header> -->
   validation inscription
-    <main class='v_inscription'>
+    <main class='v_listfilm'>
 
       <?php
-           $civilite = $_POST['civilite'];
-           $name = $_POST['nom'];
+           $titre = $_POST['titre'];
+           $synopsis = $_POST['synopsis'];
            $fname = $_POST['prenom'];
            $mail = $_POST['email'];
            $login = $_POST['login'];
@@ -60,7 +60,7 @@
             echo"<p>Les mots de passe dont différents, veuillez recommencer</p>";
           };
       ?>
-    
+
     </main>
 
     <!-- FOOTER -->

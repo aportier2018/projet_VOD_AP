@@ -19,7 +19,7 @@
          <!---****** FIN HEADER -->
 
         <!--*********FORMULAIRE -->
-    <main class="v_inscription">
+    <main>
       <section class="marginB">
         <div class="container">
            <form method="post" action="v_inscription.php">
@@ -29,11 +29,13 @@
                    <input type="radio" name="civilite" value="Mme" id="F" required/><label for="F" class="notmarge">Mme</label>
                    <input type="radio" name="civilite" value="M" id="M" required/><label for="M" class="notmarge">M</label><br>
                    <label for="nom">Nom : </label>
-                   <input type="tnomxt" name="nom" id="nom" required><br>
+                   <input type="text" name="nom" id="nom" required><br>
                    <label for="prenom">Prenom : </label>
                    <input type="text" name="prenom" id="prenom" required><br>
                    <label for="email">Email : </label>
                    <input type="email" name="email" id="email" required><br>
+                   <label for="login">Login: </label>
+                   <input type="text" name="login" id="login" required><br>
                    <label for="mdp1">Mot de passe : </label>
                    <input type="password" name="mdp1" id="mdp1" required><br>
                    <label for="mdp2">Confirmer mot de passe : </label>

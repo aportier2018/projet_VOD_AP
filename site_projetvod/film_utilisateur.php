@@ -15,7 +15,7 @@
   <body>
     <?php include("header.php") ?>
     <main>
- page index
+ page film utilisateur
     </main>
     <?php include("footer.php") ?>
   </body>

@@ -44,7 +44,7 @@
         <div class="descriptif">
           <h1><?php echo $row['titre'];?></h1>
           <h3>Synopsis :</h3><?php echo $row['synopsis'];?>
-          <h3>Date de sortie :</h3><?php echo $row['date_sortie']; ?>
+          <h3>Date de sortie :</h3><?php echo date("d/m/Y", strtotime($row['date_sortie'])); ?>
                     <?php
 
                      $reponse->closeCursor();// Termine le traitement de la requête
@@ -57,14 +57,17 @@
                        $genre = 'SELECT  genre FROM genre NATURAL JOIN possede NATURAL JOIN film WHERE id_film ="'.$idfilm.'" ';
                        $reponse = $dbh->prepare($genre);
                        // Execution de la requête
-                       $reponse->execute();
-                       // On affiche chaque entrée une à une
+                       $reponse->execute();  ?>
+                       <!-- // On affiche chaque entrée une à une -->
+                       <h3>Genre :</h3>
+
+                      <?php
                      while ($row = $reponse->fetch(PDO::FETCH_ASSOC))
                      {
-                    ?>
-               <h3>Genre :</h3><?php echo $row['genre'];?>
 
-                    <?php
+                       echo $row['genre'];?><br/>
+
+                       <?php
                     }
                       $reponse->closeCursor();// Termine le traitement de la requête
                     ?>
@@ -102,7 +105,7 @@
                         {
                     ?>
 
-              <p><?php echo $row['n_real']." ".$drow['p_real'];?></p>
+              <p><?php echo $row['n_real']." ".$row['p_real'];?></p>
                     <?php
                         }
                          $reponse->closeCursor();// Termine le traitement de la requête
