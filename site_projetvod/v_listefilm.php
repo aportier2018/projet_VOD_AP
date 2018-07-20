@@ -19,48 +19,45 @@
       <?php include("header.php") ?>
     <!-- </header> -->
   validation inscription
-    <main class='v_inscription'>
+    <main class='v_listfilm'>
 
       <?php
-           $civilite = $_POST['civilite'];
-           $name = $_POST['nom'];
-           $fname = $_POST['prenom'];
-           $mail = $_POST['email'];
-           $login = $_POST['login'];
-           $mdp1 = $_POST['mdp1'];
-           $mdp2 = $_POST['mdp2'];
+           $titre = $_POST['titre'];
+           $synopsis = $_POST['synopsis'];
+           $date = $_POST['date_sortie'];
+           $genre = $_POST['genre'];
+           $n_acteur= $_POST['n_acteur'];
+           $p_acteur= $_POST['p_acteur'];
+           $n_real= $_POST['n_realisateur'];
+           $p_real= $_POST['p_realisateur'];
+           $affiche= $_POST['affiche'];
 
-           echo "Bonjour ". $civilite." ". $name." ". $fname."<br/> Votre mail est : ".$mail."<br/>Votre login est ".$login;
+           echo "Bonjour ";
 
-           /*test sur la civilité*/
-         if ($civilite == 'F')
-         {
-            $civilite = "Mme";
-         }
-         else
-         {
-            $civilite = "M";
-          };
+           //: $dbh->exec($sql1);
+           //$lienidfilm = $dbh->query('SELECT id_films FROM Films WHERE Titre = "'.$titre.'"');
+           //$lienid = $lienidfilm->fetch();
+           //$currentid = $lienid['id_films'];
+           //$sql7 = "INSERT INTO Appartenir (id_films, id_genre) VALUES ('$currentid', '$genre')";//
 
-          /*test pour vérfier si les entrées du mot de passe sont identique*/
-        if ($mdp1 == $mdp2)
-        {
-           $mdpsha = sha1($mdp1);
-           echo "<br/>Vos mots de passe sont identiques.";
-           // echo $mdpsha;
 
-        $insertion ="INSERT INTO user(civilite, n_user, p_user, email_user, login_user, mdp_user) VALUES('$civilite','$name','$fname','$mail','$login','$mdpsha')";
+        $insertfilm ="INSERT INTO film(titre, synopsis, date_sortie, affiche) VALUES('$titre','$synopsis',' $date','$affiche')";
+        $idfilm =
+        $insertacteur ="INSERT INTO acteur(n_acteur, p_acteur) VALUES('$n_acteur','$p_acteur')";
+        $insertreal ="INSERT INTO realisateur(n_real, p_real) VALUES('$p_real','$p_real')";
 
-        $dbh->exec($insertion);
 
-        echo "<br/>Votre inscription est enregistrée.";
-          }
-          else
-          {
-            echo"<p>Les mots de passe dont différents, veuillez recommencer</p>";
-          };
+        $insertjoue="INSERT INTO joue(id_film, id_acteur) VALUES ('')"
+
+
+        $dbh->exec($insertfilm);
+        $dbh->exec($insertacteur);
+        $dbh->exec($insertreal);
+
+
+
       ?>
-    
+
     </main>
 
     <!-- FOOTER -->

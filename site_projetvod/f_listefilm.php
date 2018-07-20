@@ -23,7 +23,7 @@
     <main class="f_listfilm">
       <section class="marginB">
         <div class="container">
-           <form method="post" action="v_film.php">
+           <form method="post" action="v_listefilm.php">
                <fieldset>
                    <legend>Formulaire pour l'ajout d'un film</legend>
 
@@ -54,14 +54,14 @@
                             ?>
                       </select><br/>
 
-                   <label for="n_acteur"> nom de l'acteurs : </label>
-                   <input type="text" name="n_acteur" id="n_acteur" required><br/>
-                   <label for="p_acteur">Prénom de l'acteurs : </label>
-                   <input type="text" name="acteur" id="p_acteur" ><br>
+                   <label for="n_acteur"> nom de l'acteur : </label>
+                   <input type="text" name="n_acteur" id="n_acteur" ><br/>
+                   <label for="p_acteur">Prénom de l'acteur : </label>
+                   <input type="text" name="p_acteur" id="p_acteur" ><br>
 
-                   <label for="n_realisateur">Nom du Réalisateur : </label>
-                   <input type="text" name="n_realisateur" id="n_realisateur" required><br>
-                   <label for="p_realisateur">Prénom du Réalisateur : </label>
+                   <label for="n_realisateur">Nom du réalisateur : </label>
+                   <input type="text" name="n_realisateur" id="n_realisateur" ><br>
+                   <label for="p_realisateur">Prénom du réalisateur : </label>
                    <input type="text" name="p_realisateur" id="p-realisateur"><br>
 
                    <label for="affiche">Affiche: </label>
@@ -69,7 +69,7 @@
                    <label for ="ba">Bande-Annonce : </label>
                    <input type="" name="ba" id="ba" ><br>
 
-                   <input type="submit" value="ENOYER">
+                   <input type="submit" value="ENVOYER">
                    <input type="reset" value="RESET">
                </fieldset>
            </form>
