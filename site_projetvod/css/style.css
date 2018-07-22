@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -9,14 +11,14 @@ html, body {
 }
 
 body{
-background: url('../image/cinema.jpg') no-repeat;
-background-position: center;
-background-attachment: fixed;
-background-size: cover;
+  background: url('../image/cinema.jpg') no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
   /******************************************
-  *               HEADER                    *
+  *               HEADER.php                  *
   *                                         *
   ******************************************/
 
@@ -28,8 +30,8 @@ background-size: cover;
     z-index:10;
     color: #fff;
     height:25%;
-    background-image: url('../image/pellicule.jpg');
-    background-size: contain;
+    /* background-image: url('../image/pellicule.jpg');
+    background-size: contain; */
   }
 
   header a {
@@ -41,7 +43,7 @@ background-size: cover;
   text-shadow: 1px 1px 5px #fff;
   }
 
-  /*---------------------------BOUTON------------------------*/
+  /*---------------------------BOUTON MENU------------------------*/
 
    header div{
     cursor: pointer;
@@ -49,21 +51,26 @@ background-size: cover;
   }
 
   .menu{
-    width: 10%;
+    display:flex;
+    width: 12%;
     padding-left:3%;
+  }
+  .menu span{
+    margin-left:5%;
+    font-size:2rem;
   }
 
   .bar1, .bar2, .bar3 {
-      width: 35px;
-      height: 5px;
+      width: 30px;
+      height: 4px;
       background-color: #fff;
-      margin: 6px 0;
+      margin: 4px 0;
       /* transition: 0.3s; */
   }
 
   .change .bar1 {
-      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-      transform: rotate(-45deg) translate(-9px, 6px);
+      -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+      transform: rotate(-45deg) translate(-4px, 4px);
   }
 
   .change .bar2 {opacity: 0;}
@@ -135,17 +142,23 @@ background-size: cover;
   /*<-------------------FIN menu déroulant--------------------->*/
 
   /*<------------------liste des films--------------------->*/
-  .l_film {
+  .logo{
     width :65%;
-    margin-top: 2%;
+    font-family:'Monoton', cursive;
+    font-size: 7rem;
+    text-align: center;
+    letter-spacing: 16px;
+    margin:0;
+    text-shadow: 8px 8px 5px #0011fd, -8px -8px 5px #0011fd,0px 8px 5px #0011fd,8px 0px 5px #0011fd;
   }
 
-  /* ----------- DEBUT compte utilisateur---------------------->*/
+  /* -----------  compte utilisateur connexion--------------------->*/
 
   .compte{
-    width:20%;
-    margin-top:2%;
-  }
+    width:15%;
+    padding-left:5%;
+    font-size: 2rem;
+    }
 
   .compte a:first-child{
     float: left;
@@ -162,80 +175,95 @@ background-size: cover;
 
 
   /******************************************
-  *             LISTE DES FILMS            *
+  *    LISTE DES FILMS : index.php          *
   *                                         *
   ******************************************/
-  .liste_film{
-        margin-top:8%;
-  }
 
-  .liste_film h1{
-    font-size : 4rem;
-    color:white;
+
+  .index h1{
+    font-size: 4rem;
+    color: white;
     text-align: center;
     box-shadow: 0 0 35px 25px;
-    margin:auto;
-    padding:1%;
+    margin-top:15%;
   }
 
-  .liste_film div{
-    display:flex;
-    justify-content: space-around;
+  .liste_film{
+      margin-top:5%;
+      display:flex;
+      flex-wrap: wrap;
   }
 
-   .liste_film img{
-    margin:3%;
-    width:15%;
+  .image{
+    width:35%;
+    margin:5%;
   }
 
-  .liste_film img:hover{
-    box-shadow: 0 0 5px 5px #fff;
+   .image img{
+      width:100%;
+      height: 350px;
   }
+
+  .image:hover{box-shadow: 0 0 5px 5px #fff;
+
+  }
+
+  .image p{
+    font-size : 2.5rem;
+    color:white;
+    text-align: center;
+    margin:5%;
+  }
+
   /******************************************
-  *                DETAIL FILM              *
+  *   DETAIL FILM  : detail.php             *
   *                                         *
   ******************************************/
 
-.detail{
-  font-size: 2rem;
+.detail {
+  font-size: 1.5rem;
   color: #fff;
   margin:20% 0 5% 2%;
   display:flex;
 }
 
-.detail div:first-child{
+/* .detail div:first-child{
  width: 100%;
+} */
 
-}
-
-div img{
+.detail div img{
   width:100%;
 }
 
 .descriptif {
-padding:0 2%;
+  padding:0 2%;
 
 }
 
 .descriptif h1{
-font-size: 4rem;
-color: white;
-text-align: center;
-box-shadow: 0 0 35px 25px;
-margin: auto;
-padding: 1%;
-margin-bottom: 1%
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 35px 25px;
+  border-radius: 5px;
+  margin: auto;
+  padding: 1%;
+  margin-bottom: 1%
 }
 
 .descriptif div
 {
-margin:1%;
+  margin:1%;
 }
 
-/******************************************
-* FORMULAIRE ajout film                   *
-*                                         *
-******************************************/
+.descriptif span{
+  margin-left:0;
+}
+
+/************************************************
+*   FORMULAIRE ajout film : f_listefilm.php     *
+*                                               *
+*************************************************/
 .f_listfilm fieldset {
     color: #FFFFFF;
     width: 50%;
@@ -243,10 +271,20 @@ margin:1%;
     border-radius: 10px;
 }
 
-    /******************************************
-    * FORMULAIRE inscription utilisateur      *
-    *                                         *
-    ******************************************/
+/***********************************************************
+*        VALIDATION ajout film : v_listefilm.php           *
+*                                                          *
+************************************************************/
+.v_listefilm{
+  color: #FFFFFF;
+  margin: 17% auto ;
+  font-size: 1.5rem;
+}
+
+    /*************************************************************
+    * FORMULAIRE inscription utilisateur : f_inscription.php     *
+    *                                                            *
+    **************************************************************/
     .text {
         color: #FFFFFF;
         font-size: 4rem;
@@ -255,8 +293,8 @@ margin:1%;
 
     fieldset {
         color: #FFFFFF;
-        width: 30%;
-        margin: 100px auto ;
+        width: 40%;
+        margin :auto ;
         border-radius: 10px;
     }
 
@@ -269,7 +307,7 @@ margin:1%;
     }
 
     legend {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin:auto;
         margin-top: 10%;
         text-align: center;
@@ -306,15 +344,15 @@ margin:1%;
 
     input[type="submit"],
     input[type="reset"] {
-        width: 180px;
+        width: 130px;
         height: 40px;
         border-radius: 50%;
-        margin-left: 12%;
+        margin-left: 6%;
         color: #000;
         font-size: 1.5rem;
     }
 
-    span {
+    fieldset span {
         font-size: 2rem;
         margin-left: 4%;
     }
@@ -334,6 +372,29 @@ margin:1%;
       margin-top: 150px;
     }
 
+    .suppression,
+    .v_suppression {
+      font-size: 1.5rem;
+      color: white;
+      text-align: center;
+    }
+
+    .suppression span {
+        color:red;
+        font-size : 2rem;
+    }
+
+    .suppression a,
+    .v_suppression a
+    {
+      color:#fff;
+    }
+
+    .v_suppression{
+      margin:15% auto 5% auto;
+    }
+
+
     @media screen and (max-width: 800px) {
       fieldset {
         width: 90%;
@@ -341,21 +402,49 @@ margin:1%;
     }
 
 
-    /******************************************
-    *         Validation inscription           *
-    *                                         *
-    ******************************************/
+    /***************************************************************
+    *         Validation inscription : v_inscription.php           *
+    *                                                              *
+    ****************************************************************/
 
     .v_inscription{
       margin:20% 5% 5% 10%;
       color:#fff;
-      font-size: 2.5rem;
+      font-size: 2rem;
+    }
+
+    .v_inscription p a{
+      color:#fff;
+    }
+
+    /***************************************************************
+    *         Validation contact : v_contact.php                  *
+    *                                                              *
+    ****************************************************************/
+
+    .v_contact .contact{
+      margin: 20%;
+      font-size: 2rem;
+      color: #fff;
+      height: 150px;
+      text-align: center;
+    }
+
+    /***************************************************************
+    *         favori : film_utilisateur.php                         *
+    *                                                              *
+    ****************************************************************/
+    .favori{
+      margin: 15%;
+      font-size: 2rem;
+      color: #fff;
+      height: 150px;
+      text-align: center;
     }
 
 
-
   /******************************************
-  *               FOOTER                    *
+  *               FOOTER.PHP                *
   *                                         *
   ******************************************/
 
@@ -369,7 +458,6 @@ margin:1%;
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    font-size:  1.5rem;
     padding: 20px 20px;
     margin-top: auto;
   }
@@ -377,13 +465,14 @@ margin:1%;
   .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
     display: inline-block;
     vertical-align: middle;
+    font-size:2rem;
   }
 
   /* ------------------Footer left-------------------- */
 
   .footer-distributed .footer-left {
-    width: 30%;
-    font-size:2.5rem;
+    width: 35%;
+    font-size:1.5rem;
   }
 
   /* --------------------Footer links----------------- */
@@ -403,7 +492,7 @@ margin:1%;
 
   .footer-distributed .footer-company-name {
     color: #8f9296;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: normal;
     margin: 0;
   }
@@ -465,9 +554,10 @@ margin:1%;
   /* -------------------Footer Right------------------- */
 
   .footer-distributed .footer-right {
-    width: 20%;
-    margin-left: 10%;
+    width: 35%;
+    margin-left: 4%;
     text-align: left;
+    font-size:1.5rem;
   }
 
   .footer-distributed .footer-right i {

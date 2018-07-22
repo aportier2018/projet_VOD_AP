@@ -2,14 +2,11 @@
 
   <div class="footer-left">
 
-    <!-- <img src="image/pellicule.jpg" style= "width: 10% height:10% "alt="logo"> -->
-
     <p class="footer-links">
-      <a href="./index.php">Accueil</a> ·
-      <!-- <a href="./programme.php">Programme</a> ·
-      <a href="">Info pratiques</a> · -->
-      <a href="./form/f_inscription.php">S'inscrire</a> .
-      <a href="./form/f_connexion.php">Connexion</a>
+      <a href="index.php">Liste des films</a> ·
+      <a href="f_listefilm.php">Ajouter un film</i></a> .
+      <a href="f_inscription.php">S'inscrire/Désinscrire</a> .
+      <a href="f_connexion_user.php">Se connecter</a>
 
     </p>
     <div style = "display : flex;">

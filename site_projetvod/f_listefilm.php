@@ -1,4 +1,7 @@
-<?php include("connectbdd.php") ?>
+<?php
+include("connectbddlocal.php")//include("connectbdd.php")
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -7,7 +10,7 @@
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  	<title> formulaire d'inscription - Projet VOD AP</title>
+  	<title> formulaire d'ajout d'un film - Projet VOD AP</title>
   	<link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -28,11 +31,11 @@
                    <legend>Formulaire pour l'ajout d'un film</legend>
 
                    <label for='titre'>Titre : </label>
-                   <input type="text" name="titre" id="titre" required><br>
+                   <input type="text" name="titre" id="titre"><br>
                    <label for="synopsis">Synopsis : </label>
-                   <input type="text" name="synopsis" id="synopsis" required><br>
+                   <input type="text" name="synopsis" id="synopsis" ><br>
                    <label for="date_sortie">Date de sortie : </label>
-                   <input type="date" name="date_sortie" id="date_sortie" required><br>
+                   <input type="date" name="date_sortie" id="date_sortie" ><br>
                    <label for="genre">Genre : </label>
                     <select name="genre">
                          <?php
@@ -81,8 +84,7 @@
     <!--*********FOOTER -->
     <?php include("footer.php") ?>
     <!--*********FIN FOOTER -->
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  
     <script src="js/scripts.js"></script>
 
   </body>

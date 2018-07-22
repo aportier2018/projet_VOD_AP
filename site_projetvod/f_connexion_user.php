@@ -1,3 +1,5 @@
+<?php include("connectbddlocal.php")// include("connectbdd.php")
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,7 +12,7 @@
   	<link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   </head>
   </head>
   <body>
@@ -18,7 +20,10 @@
     <main class ="f_connexion_user">
       <section class="marginB">
         <div class="container">
-           <form method="post" action="validation_inscription.php">
+          <div class="suppression">
+            Si vous souhaitez vous désinscrire, cliquez <a href="f_suppression_user.php" value ="Se Désinscrire">ici</a>
+          </div>
+           <form method="post" action="film_utilisateur.php">
                <fieldset>
                    <legend>Renseignez les champs pour vous connecter</legend>
 
@@ -31,25 +36,11 @@
                    <label for="mdp1">Votre mot de passe est </label>
                    <input type="password" name="mdp1" id="mdp1" required><br>
 
-                   <input type="submit" value="VALIDER">
+                   <input type="submit" value="CONNECTER">
                    <input type="reset" value="RESET">
                </fieldset>
            </form>
-
-           <div class="suppresion">
-             <p> Si vous souhaitez supprimer votre compte, cliquez sur 'supprimer compte. ATTENTION Vous devrez vous réinscrire pour obtenir un nouveau compte</p>
-                   <?php
-                   echo "Si vous souhaitez supprimer votre compte, cliquez sur 'supprimer compte'";?>
-                   <p type"button" value="supprimer compte">  </p>
-                   <?php
-                   // $suppression ="DELETE FROM user WHERE civilite, n_user, p_user, email_user, login_user, mdp_user) VALUES('$civilite','$name','$fname','$mail','$login','$mdpsha')";
-                   //
-                   // $dbh->exec($suppresion);
-                   //
-                   // echo "<br/>Votre compte a été supprimé.";
-
-                   ?>
-           </div>
+           
         </section>
     </main>
     <?php include("footer.php") ?>

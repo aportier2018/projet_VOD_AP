@@ -1,4 +1,7 @@
-<?php include("connectbdd.php") ?>
+<?php
+include("connectbddlocal.php")//include("connectbdd.php")
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -57,10 +60,10 @@
           }
           else
           {
-            echo"<p>Les mots de passe dont différents, veuillez recommencer</p>";
+            echo"<p>Les mots de passe dont différents, veuillez recommencer <a href='f_inscription.php'>votre inscription</a></p>";
           };
       ?>
-    
+
     </main>
 
     <!-- FOOTER -->
@@ -68,7 +71,7 @@
     <!-- FOOTER -->
 
 	   <script src="js/scripts.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   </body>
 
 </html>

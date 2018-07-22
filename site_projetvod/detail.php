@@ -1,4 +1,6 @@
-<?php include("connectbdd.php") ?>
+<?php
+include("connectbddlocal.php")//include("connectbdd.php")
+?> ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -39,12 +41,14 @@
 
                   ?>
 
-        <div><img src ='<?php echo $row['affiche'];?>'></div>
+        <div>
+
+        <img src ='<?php echo $row['affiche'];?>'></div>
 
         <div class="descriptif">
           <h1><?php echo $row['titre'];?></h1>
-          <h3>Synopsis :</h3><?php echo $row['synopsis'];?>
-          <h3>Date de sortie :</h3><?php echo date("d/m/Y", strtotime($row['date_sortie'])); ?>
+          <span>Synopsis : </span><p>" <?php echo $row['synopsis'];?> "</p>
+          <span>Date de sortie : </span><p>- <?php echo date("d/m/Y", strtotime($row['date_sortie'])); ?></p>
                     <?php
 
                      $reponse->closeCursor();// Termine le traitement de la requête
@@ -59,13 +63,12 @@
                        // Execution de la requête
                        $reponse->execute();  ?>
                        <!-- // On affiche chaque entrée une à une -->
-                       <h3>Genre :</h3>
+                       <span>Genre :</span><p>-
 
                       <?php
                      while ($row = $reponse->fetch(PDO::FETCH_ASSOC))
                      {
-
-                       echo $row['genre'];?><br/>
+                     echo $row['genre']." ";?></p>
 
                        <?php
                     }
@@ -74,7 +77,7 @@
             </div>
 
           <div class="acteur">
-            <h3>Acteurs :</h3>
+          <span>Acteurs :</span>
                       <?php
                         $acteur ='SELECT  p_acteur, n_acteur FROM acteur NATURAL JOIN joue NATURAL JOIN film WHERE id_film = "'.$idfilm.'"';
 
@@ -86,7 +89,7 @@
                           {
                       ?>
 
-              <p><?php echo $row['n_acteur']." ".$row['p_acteur'];?></p>
+              <p>- <?php echo $row['n_acteur']." ".$row['p_acteur'];?></p>
                       <?php
                           }
                            $reponse->closeCursor();// Termine le traitement de la requête
@@ -94,7 +97,7 @@
           </div>
 
           <div class="realisateur">
-            <h3>Réalisateurs :</h3>
+            <span>Réalisateurs :</span>
                     <?php
                         $realisateur ='SELECT  p_real, n_real FROM realisateur NATURAL JOIN realise NATURAL JOIN film WHERE id_film = "'.$idfilm.'"';
                         $reponse = $dbh->prepare($realisateur);
@@ -105,7 +108,7 @@
                         {
                     ?>
 
-              <p><?php echo $row['n_real']." ".$row['p_real'];?></p>
+              <p>- <?php echo $row['n_real']." ".$row['p_real'];?></p>
                     <?php
                         }
                          $reponse->closeCursor();// Termine le traitement de la requête
