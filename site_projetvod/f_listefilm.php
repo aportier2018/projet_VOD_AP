@@ -84,7 +84,7 @@ include("connectbddlocal.php")//include("connectbdd.php")
     <!--*********FOOTER -->
     <?php include("footer.php") ?>
     <!--*********FIN FOOTER -->
-  
+
     <script src="js/scripts.js"></script>
 
   </body>

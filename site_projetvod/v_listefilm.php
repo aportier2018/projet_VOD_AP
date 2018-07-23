@@ -24,17 +24,17 @@ include("connectbddlocal.php")//include("connectbdd.php")
     <main class='v_listefilm'>
 
       <?php
-           $titre = $_POST['titre'];
-           $synopsis = $_POST['synopsis'];
-           $date = $_POST['date_sortie'];
-           $genre = $_POST['genre'];
-           $n_acteur= $_POST['n_acteur'];
-           $p_acteur= $_POST['p_acteur'];
-           $n_real= $_POST['n_realisateur'];
-           $p_real= $_POST['p_realisateur'];
-           $affiche= $_POST['affiche'];
+           $titre = addslashes($_POST['titre']);
+           $synopsis = addslashes($_POST['synopsis']);
+           $date = addslashes($_POST['date_sortie']);
+           $genre = addslashes($_POST['genre']);
+           $n_acteur= addslashes($_POST['n_acteur']);
+           $p_acteur= addslashes($_POST['p_acteur']);
+           $n_real= addslashes($_POST['n_realisateur']);
+           $p_real= addslashes($_POST['p_realisateur']);
+           $affiche= addslashes($_POST['affiche']);
 
-           echo "<h1>Bonjour validation de l'ajout du film <h1>";// $titre." ". $n_acteur."</h1>";
+           echo "<p>Votre film a été ajouté <p>";// $titre." ". $n_acteur."</h1>";
 
            //: $dbh->exec($sql1);
            //$lienidfilm = $dbh->query('SELECT id_films FROM Films WHERE Titre = "'.$titre.'"');
@@ -42,25 +42,45 @@ include("connectbddlocal.php")//include("connectbdd.php")
            //$currentid = $lienid['id_films'];
            //$sql7 = "INSERT INTO Appartenir (id_films, id_genre) VALUES ('$currentid', '$genre')";//
 
-           //Inserer les données dans les tables hfiml, acteur, realisateur
-        $insertfilm ="INSERT INTO film(titre, synopsis, date_sortie) VALUES('$titre','$synopsis',' $date')";
+           //Inserer les données dans les tables "film, acteur, realisateur"
+        $insertfilm ="INSERT INTO film(titre, synopsis, date_sortie, affiche) VALUES('$titre','$synopsis',' $date', '$affiche')";
         $dbh->exec($insertfilm);
 
-        // $insert_acteur ="INSERT INTO acteur(n_acteur, p_acteur) VALUES('$n_acteur','$p_acteur')";
-        // $dbh->exec($insert_acteur);
-        //
-        // $insert_real ="INSERT INTO realisateur(n_real, p_real) VALUES('$n_real','$p_real')";
-        // $dbh->exec($insert_real);
+        $insert_acteur ="INSERT INTO acteur(n_acteur, p_acteur) VALUES('$n_acteur','$p_acteur')";
+        $dbh->exec($insert_acteur);
+
+        $insert_real ="INSERT INTO realisateur(n_real, p_real) VALUES('$n_real','$p_real')";
+        $dbh->exec($insert_real);
 
 
-        //récupérer les id_film et id_genre pour faire l'association dans la table JOUE
+        //récupérer les id_film et id_genre pour faire l'association dans la table" "POSSEDE"
 
-        //$select_idfilm = $dbh->query('SELECT id_film FROM film WHERE titre = "'.$titre.'"');
-        //$lire_idfilm = $select_idfilm ->fetch();
-      //  $currentid = $lire_idfilm['id_films'];
+        $select_idfilm = $dbh->query('SELECT id_film FROM film WHERE titre = "'.$titre.'"');
+        $lire_idfilm = $select_idfilm ->fetch();
+        $currentidf = $lire_idfilm['id_film'];
 
-        //$insert_joue="INSERT INTO joue(id_film, id_acteur) VALUES ('$currentid','$genre')";
-      //  $dbh->exec($insert_joue);
+        $select_idgenre = $dbh->query('SELECT id_genre FROM genre WHERE genre = "'.$genre.'"');
+        $lire_idgenre = $select_idgenre ->fetch();
+        $currentidg = $lire_idgenre['id_film'];
+
+        $insert_possede ="INSERT INTO possede(id_film, id_genre) VALUES ('$currentidf','$currentidg')";
+        $dbh->exec($insert_possede);
+
+        //récupérer les id_film et id_acteur pour faire l'association dans la table" "JOUE"
+        $select_idacteur = $dbh->query('SELECT id_acteur FROM acteur WHERE n_acteur = "'.$n_acteur.'" AND p_acteur = "'.$p_acteur.'"');
+        $lire_idacteur = $select_idacteur ->fetch();
+        $currentida = $lire_idacteur['id_acteur'];
+
+        $insert_joue="INSERT INTO joue(id_film, id_acteur) VALUES ('$currentidf','$currentida')";
+        $dbh->exec($insert_joue);
+
+        //récupérer les id_film et id_real pour faire l'association dans la table "REALISE"
+        $select_idreal = $dbh->query('SELECT id_real FROM realisateur WHERE n_real = "'.$n_real.'" AND p_real = "'.$p_real.'"');
+        $lire_idreal = $select_idreal ->fetch();
+        $currentidr = $lire_idreal['id_real'];
+
+        $insert_real ="INSERT INTO realise(id_film, id_real) VALUES ('$currentidf','$currentidr')";
+        $dbh->exec($insert_real);
       ?>
 
     </main>

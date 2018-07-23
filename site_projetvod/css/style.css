@@ -18,7 +18,7 @@ body{
 }
 
   /******************************************
-  *               HEADER.php                  *
+  *               HEADER.php                *
   *                                         *
   ******************************************/
 
@@ -347,7 +347,7 @@ body{
         width: 130px;
         height: 40px;
         border-radius: 50%;
-        margin-left: 6%;
+        margin-left: 10%;
         color: #000;
         font-size: 1.5rem;
     }

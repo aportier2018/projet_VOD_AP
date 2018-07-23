@@ -1,5 +1,5 @@
 <?php
-include("connectbddlocal.php")//include("connectbdd.php")
+include("connectbdd.php")//include("connectbddlocal.php")
 ?>
 
 <!DOCTYPE html>
