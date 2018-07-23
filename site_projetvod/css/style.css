@@ -24,7 +24,7 @@ body{
 
   header {
     display:flex;
-    width: 100%;
+    min-width: 100%;
     font-size: 3.5rem;
     position: fixed;
     z-index:10;
@@ -143,7 +143,7 @@ body{
 
   /*<------------------liste des films--------------------->*/
   .logo{
-    width :65%;
+    min-width :65%;
     font-family:'Monoton', cursive;
     font-size: 7rem;
     text-align: center;
@@ -168,6 +168,17 @@ body{
     float: right;
     padding-right :10%;
   }
+
+  @media screen and (max-width: 1000px) {
+
+   .logo {
+      display: none;
+   }
+   .compte{
+     width: 78%;
+     padding-left: 40%;
+   }
+ }
 
   /*       ****************************
            *        FIN HEADER        *
@@ -201,7 +212,7 @@ body{
 
    .image img{
       width:100%;
-      height: 350px;
+      height: 450px;
   }
 
   .image:hover{box-shadow: 0 0 5px 5px #fff;
